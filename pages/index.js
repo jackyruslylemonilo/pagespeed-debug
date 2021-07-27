@@ -1,6 +1,8 @@
 import dynamic from 'next/dynamic';
 
-const Header = dynamic(() => import('../src/components/Header'));
+const Header = dynamic(() => import('../src/components/Header'), {
+  ssr: false
+});
 
 function HomePage() {
   return (
